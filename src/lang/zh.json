@@ -1,0 +1,15 @@
+{
+    "btn":{
+        "trade":"交易",
+        "active":"激活",
+        "edit":"修改",
+        "confirm":"確認",
+        "back":"返回",
+        "continue":"繼續",
+        "upgrade":"提升",
+        "action":"操作",
+        "bind":"綁定",
+        "close":"關閉"
+    },
+    "test":"測試"
+}

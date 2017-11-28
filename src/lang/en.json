@@ -1,0 +1,15 @@
+{
+    "btn":{
+        "trade":"Trade",
+        "active":"Active",
+        "edit":"Edit",
+        "confirm":"Confirm",
+        "back":"Back",
+        "continue":"Continue",
+        "upgrade":"Upgrade",
+        "action":"Action",
+        "bind":"Bind",
+        "close":"Close"
+    },
+    "test":"Test"
+}
