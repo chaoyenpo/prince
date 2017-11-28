@@ -1,0 +1,162 @@
+// Here you can add other styles
+
+.min-w-200px {
+  min-width: 200px;
+}
+.min-w-175px {
+  min-width: 175px;
+}
+.min-w-150px {
+  min-width: 150px;
+}
+.min-w-100px {
+  min-width: 100px;
+}
+.min-w-75px {
+  min-width: 75px;
+}
+.min-w-50px {
+  min-width: 50px;
+}
+
+//
+
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+//
+
+a, a:hover {
+    text-decoration: none;
+}
+
+//
+
+.referrer-card-body .card-body {
+  min-width: 100%;
+}
+
+//
+
+.invalid-feedback {
+  color: #ffcccc;
+  border-color: #ffcccc;
+}
+
+.home-input input {
+  background-color: rgba(148, 147, 163, .7);
+  font-size: 16px;
+  color: #fff;
+  border-color: rgba(148, 147, 163, .7);
+}
+
+.home-input input:focus, {
+  background-color: rgba(148, 147, 163, .7);
+  font-size: 16px;
+  color: #fff;
+  // border-color: rgba(148, 147, 163, .7);
+}
+
+.home-input select.form-control {
+  background-color: rgba(255, 255, 255, .6);
+  border: none;
+}
+
+//
+
+.rounded-10 {
+  border-radius: 10px;
+}
+
+//
+
+.btn-golden {
+  background: linear-gradient(#FFE5A6, #bd8509);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+//
+
+.bar-golden {
+  width: 100%;
+  height: 15px;
+  background: linear-gradient(#FFE5A6, #bd8509);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+//
+
+.text-silver {
+  border-radius: 0.75rem;
+  box-shadow: 1px 1px 10px #5a5a5a inset;
+  background-image: linear-gradient(#b2b2b2 0%, #e6e6e6 15%, #ffffff 25%, #ffffff 35%, #ffffff 40%, #f9f9f9 45%, #dddddd 60%, #969696 80%, #333333 100%);
+  cursor: pointer;
+  color: #5a5a5a;
+  font-size: 1rem;
+  font-family: 'Roboto', 'cwTeXYen', sans-serif;
+  font-weight: 700;
+}
+
+.text-silver:hover {
+  box-shadow: 0px 5px 20px #313131 inset;
+  background-image: linear-gradient(#a0a0a0 0%, #e5e5e5 15%, #eeeeee 25%, #ffffff 40%, #ffffff 45%, #dddddd 60%, #747474 80%, #111111 100%);
+  color: #fff;
+  text-shadow: 1px 1px 10px #fff;
+  transition: .25s;
+}
+
+.text-silver:active {
+  position: relative;
+  top: 3px;
+}
+
+//
+
+.text-wrap {
+  word-break: break-all;
+  white-space: normal;
+}
+
+//
+
+.unhover:hover{
+  text-decoration: none;
+}
+
+//
+
+.text-gold-gradient {
+  background: -webkit-linear-gradient(top, #ae8913, #ffeeb5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-shadow {
+  color: #efefef;
+  text-align: center;
+  text-shadow: 0 0 10px #ff0;
+}
+
+//
+
+.underline-blue {
+  width: 70px;
+  background: #1565C0;
+  height: 1px;
+}
+
+////
+
+.select-main {
+  height: 40px;
+  width: 100%;
+  border: none;
+}

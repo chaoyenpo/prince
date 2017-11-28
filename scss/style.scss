@@ -1,0 +1,22 @@
+/*!
+ * Vue Prince - Simple Vue.js project bootstrap template
+ * @version v1.0.0
+ * @link https://github.com/chaoyenpo/vue-prince
+ * Copyright (c) 2017 Yen-Po, Chao
+ */
+
+// Override Boostrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap source files
+@import "bootstrap/bootstrap";
+
+// Import Components
+@import "components/animated";
+@import "components/cylinder";
+@import "components/genealogy";
+@import "components/loader";
+@import "components/model";
+
+// Custom styles
+@import "custom";
