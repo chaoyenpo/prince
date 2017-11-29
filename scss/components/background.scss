@@ -1,0 +1,18 @@
+.bg-fluid {
+  min-height: 100vh;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+}
+
+.bg-translucent {
+  border:none;
+  background-color: rgba(255, 255, 255, .3);
+}
+
+.bg-transparent {
+  border:none;
+  background-color: rgba(255, 255, 255, 0);
+}
