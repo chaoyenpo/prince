@@ -1,15 +1,34 @@
 {
-    "btn":{
-        "trade":"交易",
-        "active":"激活",
-        "edit":"修改",
-        "confirm":"確認",
-        "back":"返回",
-        "continue":"繼續",
-        "upgrade":"提升",
-        "action":"操作",
-        "bind":"綁定",
-        "close":"關閉"
-    },
+  "btn":{
+    "trade":"交易",
+    "active":"激活",
+    "edit":"修改",
+    "confirm":"確認",
+    "back":"返回",
+    "continue":"繼續",
+    "upgrade":"提升",
+    "action":"操作",
+    "bind":"綁定",
+    "close":"關閉"
+  },
+  "swal":{
+    "continuance_check":"是否继续?",
+    "hit":"提示",
+    "action":"操作",
+    "success":"成功",
+    "register_success":"请至信箱收取注册邮件",
+    "send_mail_success":"请至信箱收取邮件",
+    "confirm":"确认",
+    "close":"关闭",
+    "back":"返回"
+  },
+  "login":{
+    "login":"登入",
+    "i_agree_the":"我同意",
+    "login_errors_message":"您的帳號或密碼不正確。",
+    "google_token":"Google认证码",
+    "if_enable":"如果启用",
+    "auto_logout_alert":"三分钟未操作，系统自动登出"
+  },
     "test":"測試"
 }

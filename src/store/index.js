@@ -3,7 +3,12 @@ import Vuex from 'vuex';
 // import createPersistedState from 'vuex-persistedstate';
 import i18n from '@/main';
 import store from '../store';
+
+// Components
+import alert from './modules/alert/';
+
 import auth from './modules/auth/';
+
 
 Vue.use(Vuex);
 
@@ -11,7 +16,6 @@ const state = {
   baseURL: process.env.BASE_URL,
   loading: false,
   logoutTime: 0,
-  autologoutAlert: false,
   lang: 'zh',
 };
 
@@ -24,6 +28,11 @@ const getters = {
 };
 
 const actions = {
+  initialize() {
+    // 清空 Alert
+    // 清除 Auth
+  },
+
   // test ok
   setLanguage({ commit }, lang) {
     commit('setLanguage', lang);
@@ -42,7 +51,8 @@ const actions = {
       window.autoLogoutTimeout = setTimeout(() => dispatch('autoLogout'), 1000);
     } else {
       dispatch('auth/actionLogout').then(() => {
-        commit('setAutologoutAlert', true);
+        dispatch('alert/setAlert', i18n.t('auto_logout_alert'));
+        // commit('setAutologoutAlert', true);
         store.state.router.replace({ name: 'Login' });
       });
     }
@@ -78,6 +88,7 @@ export default new Vuex.Store({
   actions,
   modules: {
     auth,
+    alert,
   },
   plugins: [
     // createPersistedState({

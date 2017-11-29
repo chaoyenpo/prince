@@ -10,16 +10,16 @@ export default {
   components: {
     //
   },
-  data () {
+  data() {
     //
   },
   computed: {
-    name () {
-      return this.$route.name
+    name() {
+      return this.$route.name;
     },
-    list () {
-      return this.$route.matched
-    }
-  }
-}
+    list() {
+      return this.$route.matched;
+    },
+  },
+};
 </script>

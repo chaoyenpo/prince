@@ -2,9 +2,7 @@ import axios from '../../../http';
 
 const state = {
   authenticated: false,
-  user: {
-    username: '無',
-  },
+  user: {},
   accessToken: null,
   verification: {
     resendSec: 0,
