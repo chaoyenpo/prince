@@ -17,7 +17,7 @@
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
-  name: 'alert',
+  name: 'Alert',
   computed: ({
     ...mapGetters({
       alerts: 'alert/alerts',

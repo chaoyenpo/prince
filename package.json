@@ -33,6 +33,7 @@
     "sweetalert2": "^7.0.5",
     "vue": "^2.5.2",
     "vue-awesome-swiper": "^2.6.7",
+    "vue-body-class": "^2.0.0-beta.2",
     "vue-events": "^3.1.0",
     "vue-i18n": "^7.3.2",
     "vue-router": "^3.0.1",

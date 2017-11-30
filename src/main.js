@@ -10,6 +10,7 @@ import * as d3 from 'd3';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import jQuery from 'jquery';
 import Popper from 'popper.js';
+import vbclass from 'vue-body-class';
 
 import App from './App';
 import VueRouter from './router';
@@ -89,6 +90,8 @@ router.beforeEach(({ meta, path }, from, next) => {
 
   return next();
 });
+
+Vue.use(vbclass, router);
 
 Vue.config.productionTip = false;
 
