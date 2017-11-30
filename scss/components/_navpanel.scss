@@ -1,0 +1,66 @@
+//== 捲軸效果的 extend
+%scrollbar-style {
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray-900;
+    }
+  }
+  &::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+    padding: 4px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(#aaa,.3);
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
+$zindex-sidebar: 1010;
+$sidebar-width: 240px;
+$sidebar-padding: 15px;
+
+$z-depth-1: 0 1px 1.5px rgba(black, .12);
+$z-depth-2: 0 3px 3px rgba(black, .16);
+$z-depth-3: 0 10px 10px rgba(black, .19);
+
+// 定義容器的空間
+.sidebar {
+  // position: relative;
+  &.sidebar-fixed-left {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: $zindex-sidebar;
+    transition: all .15s;
+  }
+}
+.sidebar-container {
+  position: relative;
+  width: $sidebar-width;
+  height: 100%;
+  box-shadow: $z-depth-3;
+
+  // 轉成 Flex 的樣式
+  &.sidebar-flex {
+    display: flex;
+    flex-direction: column;
+    .sidebar-header, .sidebar-footer {
+      flex: 0 0 auto;
+    }
+    .sidebar-body {
+      flex: 1 1 auto;
+      overflow-x: hidden;
+      overflow-y: auto;
+      @extend %scrollbar-style;
+    }
+  }
+}
+
+.sidebar-header, .sidebar-body, .sidebar-footer {
+  padding: $sidebar-padding;
+}
