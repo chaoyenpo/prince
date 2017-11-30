@@ -1,4 +1,10 @@
 {
+  "header": {
+    "personal":"個人",
+    "dashboard":"儀表板",
+    "profile":"會員資料",
+    "account":"帳戶資訊"
+  },
   "btn":{
     "trade":"交易",
     "active":"激活",
@@ -26,9 +32,9 @@
     "login":"登入",
     "i_agree_the":"我同意",
     "login_errors_message":"您的帳號或密碼不正確。",
-    "google_token":"Google认证码",
-    "if_enable":"如果启用",
-    "auto_logout_alert":"三分钟未操作，系统自动登出"
+    "google_token":"Google Token",
+    "if_enable":"如果啟用",
+    "auto_logout_alert":"長時間未操作，系統自動登出。"
   },
     "test":"測試"
 }

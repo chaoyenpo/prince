@@ -6,7 +6,7 @@
  */
 
 // Override Boostrap variables
-// @import "bootstrap-variables";
+@import "bootstrap-variables";
 
 // Import Bootstrap source files
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -17,6 +17,7 @@
 @import "components/cylinder";
 @import "components/genealogy";
 @import "components/loader";
+@import "components/sidebar";
 
 // Custom styles
 @import "custom";
