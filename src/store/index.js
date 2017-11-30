@@ -9,7 +9,6 @@ import alert from './modules/alert/';
 
 import auth from './modules/auth/';
 
-
 Vue.use(Vuex);
 
 const state = {
@@ -17,6 +16,7 @@ const state = {
   loading: false,
   logoutTime: 0,
   lang: 'zh',
+  sidebarStatus: true,
 };
 
 const getters = {
@@ -25,12 +25,17 @@ const getters = {
   logoutTime: state => state.logoutTime,
   autologoutAlert: state => state.autologoutAlert,
   lang: state => state.lang,
+  sidebarStatus: state => state.sidebarStatus,
 };
 
 const actions = {
   initialize() {
     // 清空 Alert
     // 清除 Auth
+  },
+
+  toggleSidebar({ commit }) {
+    commit('toggleSidebar');
   },
 
   // test ok
@@ -77,6 +82,9 @@ const mutations = {
   },
   setAutologoutAlert(state, trueOrFalse) {
     state.autologoutAlert = trueOrFalse;
+  },
+  toggleSidebar(state) {
+    state.sidebarStatus = !state.sidebarStatus;
   },
 };
 

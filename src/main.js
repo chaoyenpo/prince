@@ -64,7 +64,7 @@ Object.defineProperty(Vue.prototype, '$_', { value: lodash });
 // Router
 const router = VueRouter;
 router.beforeEach(({ meta, path }, from, next) => {
-  const { auth = true } = meta;
+  const { auth = false } = meta;
   const isLogin = Boolean(store.state.auth.authenticated);
 
   // Initialize

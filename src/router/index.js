@@ -1,12 +1,16 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld';
 
 // Containers
 import Full from '@/containers/Full';
 
 // Views
 import Dashboard from '@/views/Dashboard';
+import HelloWorld from '@/views/HelloWorld';
+
+// Views - Personal
+import Profile from '@/views/personal/Profile';
+import Account from '@/views/personal/Account';
 
 // Views - Pages
 import Login from '@/views/pages/Login';
@@ -35,42 +39,37 @@ export default new Router({
       redirect: '/app/dashboard',
       name: 'Home',
       component: Full,
+      meta: { bodyClass: 'bg-light' },
       children: [
         {
           path: 'dashboard',
-          name: 'Dashboarda',
+          name: 'Dashboard',
           component: Dashboard,
+          meta: { name: 'dashboard' },
         },
       ],
     },
-    // {
-    //   path: '/app',
-    //   redirect: '/app/personal',
-    //   name: 'App',
-    //   component: Full,
-    //   children: [
-    //     {
-    //       path: 'personal',
-    //       redirect: '/app/personal/profile',
-    //       name: 'Personal',
-    //       component: {
-    //         render (c) { return c('router-view') }
-    //       },
-    //       children: [
-    //         {
-    //           path: 'profile',
-    //           name: 'Profile',
-    //           component: Profile
-    //         },
-    //         {
-    //           path: 'account',
-    //           name: 'Account',
-    //           component: Account
-    //         },
-    //       ]
-    //     },
-    //   ]
-    // },
+    {
+      path: '/app/personal',
+      redirect: '/app/personal/profile',
+      name: 'App',
+      component: Full,
+      meta: { bodyClass: 'bg-light' },
+      children: [
+        {
+          path: 'profile',
+          name: 'Profile',
+          component: Profile,
+          meta: { name: 'profile' },
+        },
+        {
+          path: 'account',
+          name: 'Account',
+          component: Account,
+          meta: { name: 'account' },
+        },
+      ],
+    },
     {
       path: '/pages',
       redirect: '/pages/login',
@@ -78,6 +77,7 @@ export default new Router({
       component: {
         render(c) { return c('router-view'); },
       },
+      meta: { bodyClass: 'bg-dark' },
       children: [
         {
           path: '404',

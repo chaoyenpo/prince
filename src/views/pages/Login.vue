@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fuild bg-dark bg-cover bg-fluid d-flex align-items-center">
+  <div class="container-fuild bg-cover bg-fluid d-flex align-items-center">
     <div class="spinner" v-if="loading">
       <div class="cube1"></div>
       <div class="cube2"></div>
@@ -7,7 +7,7 @@
     <section class="container animated fadeIn" v-else>
       <div class="row justify-content-center">
 
-        <div class="col-md-7 text-center my-5">
+        <div class="col-md-5 text-center my-5">
           <div>
             <c-alert></c-alert>
 
@@ -17,21 +17,21 @@
 
             <form @submit.prevent>
               <b-form-group>
-                <input type="text" placeholder="Username" class="form-control form-control-lg in-login" :class="{ 'is-invalid': errors.message }" v-model="form.username" @keyup.enter="submit" required>
+                <input type="text" placeholder="Username" class="form-control" :class="{ 'is-invalid': errors.message }" v-model="form.username" @keyup.enter="submit" required>
               </b-form-group>
 
               <b-form-group>
-                <input type="password" placeholder="Password" class="form-control form-control-lg in-login" :class="{ 'is-invalid': errors.message }" v-model="form.password" @keyup.enter="submit" required>
+                <input type="password" placeholder="Password" class="form-control" :class="{ 'is-invalid': errors.message }" v-model="form.password" @keyup.enter="submit" required>
               </b-form-group>
 
               <b-form-group>
-                <input type="text" :placeholder="$t('login.google_token') + ' (' + $t('login.if_enable') + ')'" class="form-control form-control-lg in-login" :class="{ 'is-invalid': errors.one_time_password }" v-model="form.one_time_password" @keyup.enter="submit">
+                <input type="text" :placeholder="$t('login.google_token') + ' (' + $t('login.if_enable') + ')'" class="form-control" :class="{ 'is-invalid': errors.one_time_password }" v-model="form.one_time_password" @keyup.enter="submit">
                 <span class="invalid-feedback" v-if="errors.one_time_password">
                     {{ errors.one_time_password[0] }}
                 </span>
               </b-form-group>
 
-              <button class="btn btn-block font-weight-bold" @click="onLogin">{{ $t("login.login") }}</button>
+              <button class="btn btn-primary px-5" @click="onLogin">{{ $t("login.login") }}</button>
             </form>
           </div>
         </div>
@@ -68,23 +68,21 @@ export default {
       actionLogin: 'auth/actionLogin',
     }),
     onLogin() {
-      if (this.checkbox) {
-        this.actionLogin({
-          payload: {
-            grant_type: 'password',
-            username: this.form.username,
-            password: this.form.password,
-            one_time_password: this.form.one_time_password,
-          },
-          context: this,
-        }).then().then(() => {
-          if (this.errors === 'Maintain') {
-            this.$router.replace({ name: 'Maintain' });
-          } else {
-            this.$router.replace({ name: 'Home' });
-          }
-        });
-      }
+      this.actionLogin({
+        payload: {
+          grant_type: 'password',
+          username: this.form.username,
+          password: this.form.password,
+          one_time_password: this.form.one_time_password,
+        },
+        context: this,
+      }).then().then(() => {
+        if (this.errors === 'Maintain') {
+          this.$router.replace({ name: 'Maintain' });
+        } else {
+          this.$router.replace({ name: 'Home' });
+        }
+      });
     },
   },
 };
