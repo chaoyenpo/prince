@@ -21,6 +21,7 @@
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-vue": "^1.2.0",
     "d3": "^4.12.0",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "jquery": "^3.2.1",
     "js-cookie": "^2.2.0",

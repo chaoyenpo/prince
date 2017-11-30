@@ -9,9 +9,6 @@ export default {
 </script>
 
 <style>
-  /* Import Font Awesome Icons Set */
-  $fa-font-path: '~font-awesome/fonts/';
-  @import '~font-awesome/css/font-awesome.min.css';
   /* Import Simple Line Icons Set */
   $simple-line-font-path: '~simple-line-icons/fonts/';
   @import '~simple-line-icons/css/simple-line-icons.css';
@@ -21,6 +18,9 @@ export default {
   @import '~sweetalert2/dist/sweetalert2.css';
 </style>
 <style lang="scss">
+  /* Import Font Awesome Icons Set */
+  $fa-font-path: "~font-awesome/fonts";
+  @import "~font-awesome/scss/font-awesome";
   /* Import Animate Styles */
   @import '~animate.css';
   // Import Main styles for this application
