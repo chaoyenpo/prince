@@ -39,5 +39,6 @@ module.exports = {
     'no-console': 'off',
     'no-shadow': ['error', { 'allow': ['state'] }],
     'no-param-reassign': ['error', { 'props': true, 'ignorePropertyModificationsFor': ['state'] }],
+    "import/prefer-default-export": "off",
   }
 }
