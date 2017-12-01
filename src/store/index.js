@@ -7,8 +7,6 @@ import router from '../router';
 // Components
 import alert from './modules/alert/';
 import auth from './modules/auth/';
-import member from './modules/member/';
-
 
 Vue.use(Vuex);
 
@@ -90,7 +88,6 @@ export default new Vuex.Store({
   modules: {
     auth,
     alert,
-    member,
   },
   plugins: [
     createPersistedState({
