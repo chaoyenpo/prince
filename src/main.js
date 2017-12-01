@@ -11,6 +11,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper';
 import jQuery from 'jquery';
 import Popper from 'popper.js';
 import vbclass from 'vue-body-class';
+import { sync } from 'vuex-router-sync';
 
 import App from './App';
 import VueRouter from './router';
@@ -92,6 +93,8 @@ router.beforeEach(({ meta, path }, from, next) => {
 });
 
 Vue.use(vbclass, router);
+
+sync(store, router);
 
 Vue.config.productionTip = false;
 

@@ -1,6 +1,6 @@
 <template>
   <header class="border border-secondary border-left-0 border-right-0 bg-dark text-white">
-    <p class="h3 pl-3 py-3">{{ name }}</p>
+    <p class="h3 pl-3 py-3 mb-0">{{ name }}</p>
   </header>
 </template>
 
@@ -24,9 +24,6 @@ export default {
     list() {
       return this.$route.matched;
     },
-  },
-  mounted() {
-    console.log(this.$route);
   },
   methods: {
     ...mapActions({

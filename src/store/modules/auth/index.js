@@ -57,6 +57,7 @@ const actions = {
     });
   },
 
+  // test ok
   actionLogout({ dispatch }) {
     return axios.post('/api/v2/auth/appLogout').then(() => dispatch('clearAuth'));
   },
@@ -102,6 +103,7 @@ const actions = {
     });
   },
 
+  // test ok
   fetchUser({ commit }) {
     return axios.get('/api/v2/user').then((response) => {
       commit('setLoading', false, { root: true });
@@ -111,11 +113,11 @@ const actions = {
     });
   },
 
+  // test ok
   clearAuth({ commit }) {
     commit('setAuthenticated', false);
     commit('setUserData', {});
     commit('setAccessToken', null);
-    commit('setJumpAnnouncement', true, { root: true });
   },
 
   countDown({ dispatch, commit }) {

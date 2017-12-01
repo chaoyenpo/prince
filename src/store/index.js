@@ -1,13 +1,14 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-// import createPersistedState from 'vuex-persistedstate';
+import createPersistedState from 'vuex-persistedstate';
 import i18n from '@/main';
-import store from '../store';
+import router from '../router';
 
 // Components
 import alert from './modules/alert/';
-
 import auth from './modules/auth/';
+import member from './modules/member/';
+
 
 Vue.use(Vuex);
 
@@ -34,6 +35,7 @@ const actions = {
     // 清除 Auth
   },
 
+  // test ok
   toggleSidebar({ commit }) {
     commit('toggleSidebar');
   },
@@ -44,32 +46,26 @@ const actions = {
     // location.reload();
   },
 
-  setAutologoutAlert({ commit }, trueOrFalse) {
-    commit('setAutologoutAlert', trueOrFalse);
-  },
-
-  autoLogout({ dispatch, commit }) {
+  // test ok
+  autoLogout({ state, dispatch, commit }) {
     clearTimeout(window.autoLogoutTimeout);
     commit('setNextLogoutTime');
-    const needLogoutTime = process.env.NODE_ENV !== 'production' ? 5 : 180;
+    const needLogoutTime = process.env.NODE_ENV !== 'production' ? 9999999 : 180;
     if (state.logoutTime <= needLogoutTime) {
       window.autoLogoutTimeout = setTimeout(() => dispatch('autoLogout'), 1000);
     } else {
       dispatch('auth/actionLogout').then(() => {
-        dispatch('alert/setAlert', i18n.t('auto_logout_alert'));
-        // commit('setAutologoutAlert', true);
-        store.state.router.replace({ name: 'Login' });
+        dispatch('alert/setAlert', i18n.t('login.auto_logout_alert'));
+        router.replace({ name: 'Login' });
       });
     }
   },
 };
 
 const mutations = {
-  // test ok
   setLoading(state, status) {
     state.loading = status;
   },
-  // test ok
   setLanguage(state, lang) {
     state.lang = lang;
     i18n.locale = lang;
@@ -79,9 +75,6 @@ const mutations = {
   },
   setNextLogoutTime(state) {
     state.logoutTime += 1;
-  },
-  setAutologoutAlert(state, trueOrFalse) {
-    state.autologoutAlert = trueOrFalse;
   },
   toggleSidebar(state) {
     state.sidebarStatus = !state.sidebarStatus;
@@ -97,10 +90,11 @@ export default new Vuex.Store({
   modules: {
     auth,
     alert,
+    member,
   },
   plugins: [
-    // createPersistedState({
-    //   storage: window.sessionStorage,
-    // }),
+    createPersistedState({
+      storage: window.sessionStorage,
+    }),
   ],
 });

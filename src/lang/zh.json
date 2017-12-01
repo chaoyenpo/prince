@@ -1,9 +1,12 @@
 {
   "header": {
-    "personal":"個人",
     "dashboard":"儀表板",
+
+    "personal":"個人",
     "profile":"會員資料",
-    "account":"帳戶資訊"
+    "account":"帳戶資訊",
+
+    "language":"語言",
   },
   "btn":{
     "trade":"交易",

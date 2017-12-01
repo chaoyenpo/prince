@@ -1,9 +1,9 @@
 <template>
-  <nav class="sidebar" :class="{'sidebar-show': sidebarStatus}">
+  <nav class="sidebar bg-dark border border-secondary border-left-0 border-top-0 border-bottom-0" :class="{'sidebar-show': sidebarStatus}">
     <div class="d-flex flex-column">
 
-      <div class="sidebar-item text-center">
-        <span class="h3">Sidebar</span>
+      <div class="sidebar-item text-center text-white">
+        <span class="h3">Unycorn</span>
       </div>
 
       <router-link class="sidebar-item" :to="{name: 'Home'}">
@@ -11,22 +11,22 @@
         <span>{{ $t('header.dashboard') }}</span>
       </router-link>
 
-      <div class="sidebar-item" v-b-toggle="'collapse1'">
-        <i class="fa fa-user mr-1" style="width: 18.56px"></i>
-        <span>{{ $t('header.personal') }}</span>
+      <div class="sidebar-item" v-b-toggle="'collapse-language'">
+        <i class="fa fa-globe mr-1" style="width: 18.56px"></i>
+        <span>{{ $t('header.language') }}</span>
       </div>
-      <b-collapse id="collapse1">
-        <router-link class="sidebar-item pl-5 py-1" :to="{name: 'Account'}">
-          {{ $t('header.account') }}
-        </router-link>
-        <router-link class="sidebar-item pl-5 py-1" :to="{name: 'Profile'}">
-          {{ $t('header.profile') }}
-        </router-link>
+      <b-collapse id="collapse-language">
+        <div class="sidebar-item pl-5 py-1" @click="setLanguage('zh')">
+          繁體中文
+        </div>
+        <div class="sidebar-item pl-5 py-1" @click="setLanguage('en')">
+          English
+        </div>
       </b-collapse>
 
-      <div class="sidebar-item sidebar-footer">
+      <div class="sidebar-item sidebar-footer" @click="logout">
         <i class="fa fa-sign-out mr-1"></i>
-        登出
+        {{ $t('btn.logout') }}
       </div>
 
     </div>
@@ -54,7 +54,14 @@ export default {
   methods: {
     ...mapActions({
       toggleSidebar: 'toggleSidebar',
+      actionLogout: 'auth/actionLogout',
+      setLanguage: 'setLanguage',
     }),
+    logout() {
+      this.actionLogout().then(() => {
+        this.$router.replace({ name: 'Login' });
+      });
+    },
   },
 };
 </script>
