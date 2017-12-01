@@ -28,3 +28,16 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Setup
+
+1. config/dev.env.js => BASE_URL
+1. config/prod.env.js => BASE_URL
+
+1. index.html => title
+
+
+
+
+
+
