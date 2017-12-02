@@ -1,17 +1,18 @@
 <template>
-  <div class="app sidebar-has" :class="{'sidebar-show': sidebarStatus}">
+  <div class="app sidebar-has bg-fluid d-flex flex-column justify-content-end" :class="{'sidebar-show': sidebarStatus}">
     <app-navbar></app-navbar>
     <app-header></app-header>
     <sidebar></sidebar>
-    <div class="container-fluid">
+    <div>
       <router-view></router-view>
     </div>
+    <app-footer class="mt-auto"></app-footer>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
-import { Navbar as AppNavbar, Header as AppHeader, Sidebar } from '../components';
+import { Navbar as AppNavbar, Header as AppHeader, Sidebar, Footer as AppFooter } from '../components';
 
 export default {
   name: 'Full',
@@ -19,6 +20,7 @@ export default {
     AppNavbar,
     AppHeader,
     Sidebar,
+    AppFooter,
   },
   data() {
     return {

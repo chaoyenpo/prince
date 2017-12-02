@@ -39,7 +39,7 @@ export default new Router({
       redirect: '/app/dashboard',
       name: 'Home',
       component: Full,
-      meta: { bodyClass: 'bg-light' },
+      meta: { bodyClass: 'bg-gray-200' },
       children: [
         {
           path: 'dashboard',
@@ -54,7 +54,7 @@ export default new Router({
       redirect: '/app/personal/profile',
       name: 'App',
       component: Full,
-      meta: { bodyClass: 'bg-light' },
+      meta: { bodyClass: 'bg-gray-200' },
       children: [
         {
           path: 'profile',

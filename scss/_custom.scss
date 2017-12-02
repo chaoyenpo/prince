@@ -1,8 +1,23 @@
 // Here you can add other styles
 
-// Test body class
+// border
 
+.border-top-1 {
+  border-top: 1px solid;
+}
+.border-top-2 {
+  border-top: 2px solid;
+}
+.border-top-3 {
+  border-top: 3px solid;
+}
 
+//
+
+.bg-login {
+  // background-image: url('/static/img/bg-login.jpg');
+  background-color: #fff;
+}
 
 //
 

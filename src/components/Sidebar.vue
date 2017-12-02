@@ -3,7 +3,7 @@
     <div class="d-flex flex-column">
 
       <div class="sidebar-item text-center text-white">
-        <span class="h3">Unycorn</span>
+        <span class="h3">XXX</span>
       </div>
 
       <router-link class="sidebar-item" :to="{name: 'Home'}">

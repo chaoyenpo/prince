@@ -1,12 +1,13 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <button class="btn btn-dark py-1" type="button" @click="toggleSidebar">
-      <i class="fa fa-bars"></i>
-    </button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-2 text-truncate">
+    <div class="d-flex justify-content-between align-items-center w-100">
 
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
+      <button class="btn btn-dark py-1" type="button" @click="toggleSidebar">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <span class="nav-item text-gray-600">嗨 XXX , 您目前等級 <span class="badge badge-primary">Diamond</span></span>
+    </div>
 
     <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="navbar-nav">
