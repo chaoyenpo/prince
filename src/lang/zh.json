@@ -18,7 +18,9 @@
     "upgrade":"提升",
     "action":"操作",
     "bind":"綁定",
-    "close":"關閉"
+    "close":"關閉",
+    "login":"登入",
+    "logout":"登出"
   },
   "swal":{
     "continuance_check":"是否继续?",
