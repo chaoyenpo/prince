@@ -37,6 +37,7 @@ export { i18n as default };
 
 // Vue filter
 Vue.filter('currency', (val, bit = 2) => accounting.formatNumber(val, bit));
+Vue.filter('status', val => (val ? 'Yes' : 'No'));
 
 // Bootstrap Vue
 Vue.use(BootstrapVue);
