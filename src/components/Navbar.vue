@@ -6,7 +6,7 @@
         <i class="fa fa-bars"></i>
       </button>
 
-      <span class="nav-item text-gray-600">嗨 XXX , 您目前等級 <span class="badge badge-primary">Diamond</span></span>
+      <span class="nav-item text-gray-600">嗨 {{ user.username }} , 您目前等級 <span class="badge badge-primary">{{ user.level }}</span></span>
     </div>
 
     <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
   name: 'Header',
@@ -36,6 +36,9 @@ export default {
     };
   },
   computed: {
+    ...mapGetters({
+      user: 'auth/user',
+    }),
     name() {
       return this.$route.name;
     },

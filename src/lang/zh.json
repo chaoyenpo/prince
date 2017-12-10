@@ -23,14 +23,14 @@
     "logout":"登出"
   },
   "swal":{
-    "continuance_check":"是否继续?",
+    "continuance_check":"是否繼續?",
     "hit":"提示",
     "action":"操作",
     "success":"成功",
-    "register_success":"请至信箱收取注册邮件",
-    "send_mail_success":"请至信箱收取邮件",
-    "confirm":"确认",
-    "close":"关闭",
+    "register_success":"請至信箱收取註冊郵件",
+    "send_mail_success":"請至信箱收取郵件",
+    "confirm":"確認",
+    "close":"關閉",
     "back":"返回"
   },
   "login":{
